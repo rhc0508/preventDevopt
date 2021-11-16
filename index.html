@@ -19,9 +19,10 @@
         //     });
         // });
 
-        document.onkeypress = disableKey;
+        document.onkeydown = disableKey;
         function disableKey(event){
             if(event.keyCode == 123 || devent.keyCode == 16 || event.keyCode == 17 || event.keyCode == 18 || event.keyCode == 21){
+                console.log(event);
                 alert("해당 키보드는 사용할 수 없습니다.");
                 return false;
                 event.returnValue = false;
