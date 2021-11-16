@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>홈페이지에서 우클릭 막기 / f12(검사창 열기) 막기 / 드래그(마우스로 작성된 텍스트 가져오기) 막기</title>
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
         //F12(검사창 열기) 막기
@@ -26,16 +27,16 @@
         });
 
         //우클릭 막기
-        // document.onmousedown = disableclick;
-        // status = "해당 사이트는 우클릭을 할 수 없습니다.";
+        document.onmousedown = disableclick;
+        status = "해당 사이트는 우클릭을 할 수 없습니다.";
 
-        // function disableclick(event){
-        //     //console.log(event);
-        //     if(event.button == 2){  /*마우스를 우클릭 한 상태*/
-        //         alert(status);
-        //         return false;
-        //     }
-        // }
+        function disableclick(event){
+            //console.log(event);
+            if(event.button == 2){  /*마우스를 우클릭 한 상태*/
+                alert(status);
+                return false;
+            }
+        }
     </script>
 </head>
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
