@@ -26,16 +26,16 @@
         });
 
         //우클릭 막기
-        document.onmousedown = disableclick;
-        status = "해당 사이트는 우클릭을 할 수 없습니다.";
+        // document.onmousedown = disableclick;
+        // status = "해당 사이트는 우클릭을 할 수 없습니다.";
 
-        function disableclick(event){
-            //console.log(event);
-            if(event.button == 2){  /*마우스를 우클릭 한 상태*/
-                alert(status);
-                return false;
-            }
-        }
+        // function disableclick(event){
+        //     //console.log(event);
+        //     if(event.button == 2){  /*마우스를 우클릭 한 상태*/
+        //         alert(status);
+        //         return false;
+        //     }
+        // }
     </script>
 </head>
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
