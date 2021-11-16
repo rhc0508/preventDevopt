@@ -7,32 +7,31 @@
     <title>홈페이지에서 우클릭 막기 / f12(검사창 열기) 막기 / 드래그(마우스로 작성된 텍스트 가져오기) 막기</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
-        //F12(검사창 열기) 막기 
+        //F12(검사창 열기) 막기
         $(document).ready(function(){
-
+            
             $(document).bind("keydown", function(e){
-                console.log(e);
-                if(e.keyCode == 123){ //F12 키보드를 눌렀을때
+                //console.log(e);
+                if(e.keyCode == 123){  /*F12 키보드를 눌렀을 때*/
                     e.preventDefault();
                     e.returnValue = false;
-                    alert("해당 키보드는 사용할 수 없습니다.")
+                    alert("해당 키보드는 사용할 수 없습니다.");
                 }
                 if(e.keyCode == 17){
                     e.preventDefault();
                     e.returnValue = false;
-                    alert("해당 키보드는 사용할 수 없습니다.")
+                    alert("해당 키보드는 사용할 수 없습니다.");
                 }
             });
         });
 
-
         //우클릭 막기
         document.onmousedown = disableclick;
-        status = "해당 사이트는 우클릭을 할 수 없습니다."
+        status = "해당 사이트는 우클릭을 할 수 없습니다.";
 
         function disableclick(event){
             //console.log(event);
-            if(event.button == 2){ //마우스를 우클릭한 상태
+            if(event.button == 2){  /*마우스를 우클릭 한 상태*/
                 alert(status);
                 return false;
             }
@@ -41,6 +40,8 @@
 </head>
 <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
     <h2>우클릭 막기 / f12(검사창 열기) 막기 / 드래그(마우스로 작성된 텍스트 가져오기) 막기</h2>
+
+
     
 </body>
 </html>
